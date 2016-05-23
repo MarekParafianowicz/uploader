@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
   
-  root  'articles#new'
-
-  get 'articles/index'
-
-  get 'articles/show'
-
-  get 'articles/new' => 'articles#new'
-
-  get 'articles/create'
+  # root 'welcome#index'
+  # root 'articles#index'
+  # get 'articles'       => 'articles#index'
+  # get 'article/:id'    => 'articles#show'
+  get 'articles/new'   => 'articles#new'
+  # get 'articles/create'
+  resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
