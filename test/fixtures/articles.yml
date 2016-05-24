@@ -1,5 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+BusinessArticle:
+  name: W pogoni za kasą
+  paper: PulsBiznesu
+  file: w_pogoni.pdf
+
 one:
   name: MyString
   paper: MyString

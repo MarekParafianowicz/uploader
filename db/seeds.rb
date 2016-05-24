@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+9.times do |n|
+  name = "Article#{n}"
+  paper = "Paper#{n}"
+  file = "Test_file#{n}"
+  Article.create(name: name,
+               	  paper: paper,
+               	  file: file)
+end

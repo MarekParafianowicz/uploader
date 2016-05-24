@@ -1,11 +1,16 @@
 <% provide(:title, "Articles") %>
 
-<h2>List of articles:</h2>
+<h1>List of articles:</h1>
+
+<%= Article.count %>
 
 <% @articles.each do |article| %>
 	<p>
-		<%= article.name %>
+		<%= link_to article.name, "articles/#{article.id}" %>
 		<%= article.paper %>
 		<%= article.file %>
+		| <%= link_to "delete", article, method: :delete %>
 	</p>
 <% end %>
+
+<%= link_to "Upload new article", 'articles/new' %>

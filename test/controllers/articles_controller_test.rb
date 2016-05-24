@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
+  
+  def setup
+    @article = articles(:BusinessArticle)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -8,7 +13,7 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, id: @article
     assert_response :success
     assert_select "title", "Article" #change to real article Title
   end
@@ -19,9 +24,9 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_select "title", "Upload article"
   end
 
-  test "should get create" do
-    get :create
-    assert_response :success
-  end
+  # test "should get create" do
+  #   get :create
+  #   assert_response :success
+  # end
 
 end

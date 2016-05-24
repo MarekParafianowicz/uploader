@@ -1,5 +1,11 @@
 <% provide(:title, "Article") %>
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h1>Articles <%= @article.id %></h1>
 
 <%= @article.name %>, <%= @article.paper %>, <%= @article.file %>
+| <%= link_to "delete", @article, method: :delete %>
+
+
+<!-- Testing reading files from Public repository -->
+<%= link_to "TestPDF", "/Case 2 Saving early on - Marek Parafianowicz.pdf", target: "_blank" %>
+
+<p> <%= link_to "List of articles", root_path %> </p>

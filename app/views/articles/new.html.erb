@@ -1,1 +1,26 @@
 <% provide(:title, "Upload article") %>
+
+<h1>Upload new article</h1>
+
+<%= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <p>
+  	<%= f.label :name %>
+  	<%= f.text_field :name %>
+  </p>
+  
+  <p>
+  <%= f.label :paper %>
+  <%= f.text_field :paper %>
+  </p>
+
+  <p>
+  <%= f.label :file %>
+  <%= f.text_field :file %>
+  </p>
+  
+  <p>
+  <%= f.submit "Upload" %>
+  </p>
+<% end %>
+
+<%= link_to "List of articles", root_path %>

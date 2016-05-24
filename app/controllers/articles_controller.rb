@@ -10,16 +10,24 @@ class ArticlesController < ApplicationController
   end
 
   def new
-  	# @article = Article.new
+  	@article = Article.new
   end
 
   def create
+    @article = Article.new(article_params)
+    @article.save
+    redirect_to root_url
   end
 
-  # private
+  def destroy
+    Article.find(params[:id]).destroy
+    redirect_to root_path
+  end
+
+  private
   
-  #   def article_params
-  #     params.require(:article).permit(:name, :paper, :file, :date)
-  #   end
+    def article_params
+      params.require(:article).permit(:name, :paper, :file)
+    end
 	
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # root 'welcome#index'
+  root 'articles#index'
   # root 'articles#index'
   # get 'articles'       => 'articles#index'
   # get 'article/:id'    => 'articles#show'
