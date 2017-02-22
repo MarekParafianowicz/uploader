@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
-  
+
   def setup
     @article = articles(:BusinessArticle)
   end
@@ -24,9 +24,11 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_select "title", "Upload article"
   end
 
-  # test "should get create" do
-  #   get :create
-  #   assert_response :success
-  # end
+  test "should get create" do
+    assert_difference('Article.count', 1) do
+      post :create, article: { name: "Testowy Art", paper: "Gazetka", file: "paper.pdf" }
+    end
+    assert_redirected_to root_path
+  end
 
 end
