@@ -25,9 +25,9 @@ class ArticlesController < ApplicationController
   end
 
   private
-  
+
     def article_params
-      params.require(:article).permit(:name, :paper, :file)
+      params.require(:article).permit(:name, :paper, :file, :remote_file_url)
     end
-	
+
 end

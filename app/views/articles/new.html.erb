@@ -9,13 +9,18 @@
   </p>
 
   <p>
-  <%= f.label :paper %>
-  <%= f.text_field :paper %>
+    <%= f.label :paper %>
+    <%= f.text_field :paper %>
+  </p>
+
+    <p>
+    <%= f.label :file %>
+    <%= f.file_field :file %>
   </p>
 
   <p>
-  <%= f.label :file %>
-  <%= f.file_field :file %>
+    <%= f.label :remote_file_url, "OR image URL:" %>
+    <%= f.text_field :remote_file_url %>
   </p>
 
   <p>
