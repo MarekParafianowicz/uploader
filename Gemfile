@@ -8,6 +8,8 @@ gem 'jquery-rails',         '4.0.3'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem 'rmagick'
+gem "mini_magick"
 gem 'therubyracer', platforms: :ruby
 gem 'carrierwave',          '0.10.0'
 
