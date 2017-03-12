@@ -2,13 +2,15 @@
 
 <h1>List of articles:</h1>
 
-<%= Article.count %>
+<h2>
+  <%= "Number of articles: #{Article.count}" %>
+</h2>
 
 <% @articles.each do |article| %>
 	<p>
 		<%= link_to article.name, "articles/#{article.id}" %>
-		<%= article.paper %>
-		<%= image_tag article.file.thumb.url.to_s %>
+		| <%= article.paper.blank? ? "No content provided" : article.paper %>
+		| <%= article.file.blank? ? "No picture provided" : image_tag(article.file.thumb.url.to_s) %>
 		| <%= link_to "delete", article, method: :delete %>
 	</p>
 <% end %>
