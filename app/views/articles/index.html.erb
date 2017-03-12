@@ -7,13 +7,14 @@
 </h2>
 
 <% @articles.each do |article| %>
-  <% article = ArticlePresenter.new(article, self) %>
-	<p>
-		<%= link_to article.name, "articles/#{article.id}" %>
-		| <%= article.content %>
-    | <%= article.picture %>
-    | <%= link_to "delete", @article, method: :delete %>
-	</p>
+  <% present(article) do |article| %>
+  	<p>
+  		<%= link_to article.name, "articles/#{article.id}" %>
+  		| <%= article.content %>
+      | <%= article.picture %>
+      | <%= link_to "delete", @article, method: :delete %>
+  	</p>
+  <% end %>
 <% end %>
 
 <%= link_to "Upload new article", 'articles/new' %>

@@ -1,13 +1,11 @@
 <% provide(:title, "Article") %>
 <h1>Articles <%= @article.id %></h1>
 
-<%= @article.name %>
-| <%= @article.content %>
-| <%= @article.picture %>
-| <%= link_to "delete", @article, method: :delete %>
-
-
-<!-- Testing reading files from Public repository -->
-<%= link_to "TestPDF", "/Case 2 Saving early on - Marek Parafianowicz.pdf", target: "_blank" %>
+<% present(@article) do |article| %>
+  <%= article.name %>
+  | <%= article.content %>
+  | <%= article.picture %>
+  | <%= link_to "delete", article, method: :delete %>
+<% end %>
 
 <p> <%= link_to "List of articles", root_path %> </p>
