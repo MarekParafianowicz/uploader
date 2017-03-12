@@ -3,15 +3,16 @@
 <h1>List of articles:</h1>
 
 <h2>
-  <%= "Number of articles: #{Article.count}" %>
+  <%= "Number of articles: #{@articles.count}" %>
 </h2>
 
 <% @articles.each do |article| %>
+  <% article = ArticlePresenter.new(article, self) %>
 	<p>
 		<%= link_to article.name, "articles/#{article.id}" %>
-		| <%= content(article) %>
-		| <%= picture(article) %>
-		| <%= link_to "delete", article, method: :delete %>
+		| <%= article.content %>
+    | <%= article.picture %>
+    | <%= link_to "delete", @article, method: :delete %>
 	</p>
 <% end %>
 

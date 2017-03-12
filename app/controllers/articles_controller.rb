@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
 
-
   def index
     @articles = Article.all
   end
 
   def show
-    @article = Article.find(params[:id])
+    article = Article.find(params[:id])
+    @article = ArticlePresenter.new(article, view_context)
   end
 
   def new

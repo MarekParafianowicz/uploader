@@ -1,7 +1,9 @@
 <% provide(:title, "Article") %>
 <h1>Articles <%= @article.id %></h1>
 
-<%= @article.name %>, <%= @article.paper %>, <%= @article.file %>
+<%= @article.name %>
+| <%= @article.content %>
+| <%= @article.picture %>
 | <%= link_to "delete", @article, method: :delete %>
 
 
