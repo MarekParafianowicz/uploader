@@ -9,8 +9,8 @@
 <% @articles.each do |article| %>
 	<p>
 		<%= link_to article.name, "articles/#{article.id}" %>
-		| <%= article.content %>
-		| <%= article.picture %>
+		| <%= content(article) %>
+		| <%= picture(article) %>
 		| <%= link_to "delete", article, method: :delete %>
 	</p>
 <% end %>
