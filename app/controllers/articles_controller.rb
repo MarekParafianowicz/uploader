@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = ArticlesPresenter.new(articles: Article.all, view_context: view_context).articles
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = ArticlePresenter.new(model: Article.find(params[:id]), view: view_context)
   end
 
   def new

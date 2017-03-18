@@ -1,11 +1,9 @@
 <% provide(:title, "Article") %>
 <h1>Articles <%= @article.id %></h1>
 
-<% present(@article) do |article| %>
-  <%= article.name %>
-  | <%= article.content %>
-  | <%= article.picture %>
-  | <%= link_to "delete", article, method: :delete %>
-<% end %>
+<%= @article.name %>
+| <%= @article.content %>
+| <%= @article.picture %>
+| <%= link_to "delete", @article, method: :delete %>
 
 <p> <%= link_to "List of articles", root_path %> </p>
