@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
+  decorates_assigned :article, :articles
 
   def index
-    @articles = ArticlesPresenter.new(articles: Article.all, view_context: view_context).articles
+    @articles = Article.all
   end
 
   def show
-    @article = ArticlePresenter.new(model: Article.find(params[:id]), view: view_context)
+    @article = Article.find(params[:id])
   end
 
   def new

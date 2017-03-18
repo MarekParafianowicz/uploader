@@ -3,10 +3,10 @@
 <h1>List of articles:</h1>
 
 <h2>
-  <%= "Number of articles: #{@articles.count}" %>
+  <%= "Number of articles: #{articles.count}" %>
 </h2>
 
-<% @articles.each do |article| %>
+<% articles.each do |article| %>
 	<p>
 		<%= link_to article.name, "articles/#{article.id}" %>
 		| <%= article.content %>

@@ -1,4 +1,6 @@
-class ArticlePresenter < BasePresenter
+class ArticleDecorator < Draper::Decorator
+  delegate_all
+
   def content
     model.paper.blank? ? "No content provided" : model.paper
   end
