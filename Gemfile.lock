@@ -60,6 +60,11 @@ GEM
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -118,6 +123,7 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     ref (2.0.0)
+    request_store (1.3.2)
     rmagick (2.16.0)
     sass (3.4.22)
     sass-rails (5.0.2)
@@ -165,6 +171,7 @@ DEPENDENCIES
   byebug (= 3.4.0)
   carrierwave (= 0.10.0)
   coffee-rails (= 4.1.0)
+  draper
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
   mini_magick
@@ -180,4 +187,4 @@ DEPENDENCIES
   web-console (= 2.0.0.beta3)
 
 BUNDLED WITH
-   1.14.2
+   1.14.6

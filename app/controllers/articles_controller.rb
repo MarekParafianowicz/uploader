@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-
+  decorates_assigned :article, :articles
 
   def index
     @articles = Article.all

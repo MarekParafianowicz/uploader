@@ -12,6 +12,7 @@ gem 'rmagick'
 gem "mini_magick"
 gem 'therubyracer', platforms: :ruby
 gem 'carrierwave',          '0.10.0'
+gem 'draper'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
